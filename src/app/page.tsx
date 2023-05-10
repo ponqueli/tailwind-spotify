@@ -52,42 +52,42 @@ export default function Home() {
 
           <h1 className='font-semibold text-3xl mt-10'>Good afternoon</h1>
           <div className='grid grid-cols-3 gap-4 mt-4'>
-            <a href="#" className='group bg-white/5 rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
+            <a href="#" className='group bg-white/5 rounded-md overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
               <Image src="/album.jpeg" width={104} height={104} alt="capa album era" />
               <strong>Era</strong>
               <button className='w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible'>
                 <Play />
               </button>
             </a>
-            <a href="#" className='group bg-white/5 rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
+            <a href="#" className='group bg-white/5 rounded-md overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
               <Image src="/album.jpeg" width={104} height={104} alt="capa album era" />
               <strong>Era</strong>
               <button className='w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible'>
                 <Play />
               </button>
             </a>
-            <a href="#" className='group bg-white/5 rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
+            <a href="#" className='group bg-white/5 rounded-md overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
               <Image src="/album.jpeg" width={104} height={104} alt="capa album era" />
               <strong>Era</strong>
               <button className='w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible'>
                 <Play />
               </button>
             </a>
-            <a href="#" className='group bg-white/5 rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
+            <a href="#" className='group bg-white/5 rounded-md overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
               <Image src="/album.jpeg" width={104} height={104} alt="capa album era" />
               <strong>Era</strong>
               <button className='w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible'>
                 <Play />
               </button>
             </a>
-            <a href="#" className='group bg-white/5 rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
+            <a href="#" className='group bg-white/5 rounded-md overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
               <Image src="/album.jpeg" width={104} height={104} alt="capa album era" />
               <strong>Era</strong>
               <button className='w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible'>
                 <Play />
               </button>
             </a>
-            <a href="#" className='group bg-white/5 rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
+            <a href="#" className='group bg-white/5 rounded-md overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
               <Image src="/album.jpeg" width={104} height={104} alt="capa album era" />
               <strong>Era</strong>
               <button className='w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible'>
@@ -97,7 +97,28 @@ export default function Home() {
           </div>
 
           <h2 className='font-semibold text-2xl mt-10'>Made for Jose Conto</h2>
-
+          <div className="grid grid-cols-6 gap-4 mt-4">
+            <a href='#' className="bg-white/5 p-3 flex flex-col gap-2 rounded-md hover:bg-white/10">
+              <Image className="w-full" src="/album.jpeg" width={120} height={120} alt="capa album era" />
+              <strong className='font-semibold'>Daily Mix 1</strong>
+              <span className='text-sm text-zinc-400'>Classic Tale, Royal Symphony Orchestra, and more</span>
+            </a>
+            <a href='#' className="bg-white/5 p-3 flex flex-col gap-2 rounded-md hover:bg-white/10">
+              <Image className="w-full" src="/album.jpeg" width={120} height={120} alt="capa album era" />
+              <strong className='font-semibold'>Daily Mix 1</strong>
+              <span className='text-sm text-zinc-400'>Classic Tale, Royal Symphony Orchestra, and more</span>
+            </a>
+            <a href='#' className="bg-white/5 p-3 flex flex-col gap-2 rounded-md hover:bg-white/10">
+              <Image className="w-full" src="/album.jpeg" width={120} height={120} alt="capa album era" />
+              <strong className='font-semibold'>Daily Mix 1</strong>
+              <span className='text-sm text-zinc-400'>Classic Tale, Royal Symphony Orchestra, and more</span>
+            </a>
+            <a href='#' className="bg-white/5 p-3 flex flex-col gap-2 rounded-md hover:bg-white/10">
+              <Image className="w-full" src="/album.jpeg" width={120} height={120} alt="capa album era" />
+              <strong className='font-semibold'>Daily Mix 1</strong>
+              <span className='text-sm text-zinc-400'>Classic Tale, Royal Symphony Orchestra, and more</span>
+            </a>
+          </div>
         </main>
       </div>
       <footer className="bg-zinc-800 border-t border-zinc-700 p-6">footer</footer>
