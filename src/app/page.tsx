@@ -1,4 +1,4 @@
-import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play, Heart } from 'lucide-react'
+import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play, Heart, Shuffle, SkipBack, SkipForward, Repeat } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Home() {
@@ -130,7 +130,35 @@ export default function Home() {
           </div>
           <a className='ml-3' href='#'><Heart /></a>
         </div>
-        <div></div>
+
+        <div className='flex flex-col items-center gap-2'>
+          <div className='flex items-center gap-6'>
+            <button>
+              <Shuffle size={20} className='text-zinc-200' />
+            </button>
+            <button>
+              <SkipBack size={20} className='text-zinc-200' />
+            </button>
+            <button className='w-10 h-10 flex items-center justify-center pl-1 rounded-full bg-white text-black'>
+              <Play />
+            </button>
+            <button>
+              <SkipForward size={20} className='text-zinc-200' />
+            </button>
+            <button>
+              <Repeat size={20} className='text-zinc-200' />
+            </button>
+          </div>
+
+          <div className='flex items-center gap-3'>
+            <span className='text-xs text-zinc-400'>0:33</span>
+            <div className="h-1 rounded-full w-80 bg-zinc-600">
+              <div className="h-1 w-40 bg-zinc-200 rounded-full"></div>
+            </div>
+            <span className='text-xs text-zinc-400'>3:03</span>
+          </div>
+        </div>
+
         <div></div>
       </footer>
     </div>
