@@ -1,4 +1,4 @@
-import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play } from 'lucide-react'
+import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play, Heart } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Home() {
@@ -121,7 +121,18 @@ export default function Home() {
           </div>
         </main>
       </div>
-      <footer className="bg-zinc-800 border-t border-zinc-700 p-6">footer</footer>
+      <footer className="bg-zinc-800 border-t border-zinc-700 p-6 flex items-center justify-between">
+        <div className='flex items-center gap-3'>
+          <Image src="/album.jpeg" width={56} height={56} alt="capa album era" />
+          <div className='flex flex-col gap-1'>
+            <strong className='font-normal'>Hymne</strong>
+            <span className='text-xs text-zinc-400'>Era</span>
+          </div>
+          <a className='ml-3' href='#'><Heart /></a>
+        </div>
+        <div></div>
+        <div></div>
+      </footer>
     </div>
   )
 }
