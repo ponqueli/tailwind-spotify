@@ -1,41 +1,83 @@
-import { HomeIcon, Library, Search } from "lucide-react";
+import { ThreeAppleButtons } from "./ThreeAppleButtons";
+import { Menu } from "./Menu";
+import { NavPlayList } from "./NavPlayList";
+
+interface ItemProps {
+  id: number,
+  name: string,
+  href: string,
+}
 
 export function Sidebar() {
+  const playList: ItemProps[] = [
+    {
+      id: 1,
+      name: "TudoJunto & Misturado",
+      href: "#"
+    },
+    {
+      id: 2,
+      name: "Deep House 2023",
+      href: "#"
+    },
+    {
+      id: 3,
+      name: "Dramatic Classical",
+      href: "#"
+    },
+    {
+      id: 4,
+      name: "Baden",
+      href: "#"
+    },
+    {
+      id: 5,
+      name: "Pop Goes Classical",
+      href: "#"
+    },
+    {
+      id: 6,
+      name: "Baden",
+      href: "#"
+    },
+    {
+      id: 7,
+      name: "Cinema Paradiso - Ennio Morricone",
+      href: "#"
+    },
+    {
+      id: 8,
+      name: "Benedictus - Karl Jenkins",
+      href: "#"
+    },
+    {
+      id: 9,
+      name: "Rosicrucian Meditation",
+      href: "#"
+    },
+    {
+      id: 10,
+      name: "Classical Essentials",
+      href: "#"
+    },
+    {
+      id: 11,
+      name: "Antigonas xD",
+      href: "#"
+    },
+    {
+      id: 12,
+      name: "ClassicsByJose",
+      href: "#"
+    },
+  ]
   return (
     <aside className="w-72 bg-zinc-950 p-6">
-      <div className='flex items-center gap-2 '>
-        <button className='w-3 h-3 bg-red-500 rounded-full' />
-        <button className='w-3 h-3 bg-yellow-500 rounded-full' />
-        <button className='w-3 h-3 bg-green-500 rounded-full' />
-      </div>
-      <nav className='space-y-5 mt-6'>
-        <a href="#" className='flex items-center gap-3 text-sm font-semibold text-zinc-300 hover:text-zinc-100'>
-          <HomeIcon />
-          Home
-        </a>
-        <a href="#" className='flex items-center gap-3 text-sm font-semibold text-zinc-300 hover:text-zinc-100'>
-          <Search />
-          Search
-        </a>
-        <a href="#" className='flex items-center gap-3 text-sm font-semibold text-zinc-300 hover:text-zinc-100'>
-          <Library />
-          Your Library
-        </a>
-      </nav>
-
-      <nav className='mt-6 pt-6 border-t border-zinc-800 flex flex-col gap-3'>
-        <a href="" className='flex items-center gap-3 text-sm text-zinc-400 hover:text-zinc-100'>TudoJunto&Misturado</a>
-        <a href="" className='flex items-center gap-3 text-sm text-zinc-400 hover:text-zinc-100'>Deep House 2023</a>
-        <a href="" className='flex items-center gap-3 text-sm text-zinc-400 hover:text-zinc-100'>Dramatic Classical</a>
-        <a href="" className='flex items-center gap-3 text-sm text-zinc-400 hover:text-zinc-100'>Baden</a>
-        <a href="" className='flex items-center gap-3 text-sm text-zinc-400 hover:text-zinc-100'>Mozart for Babies</a>
-        <a href="" className='flex items-center gap-3 text-sm text-zinc-400 hover:text-zinc-100'>Pop Goes Classical</a>
-        <a href="" className='flex items-center gap-3 text-sm text-zinc-400 hover:text-zinc-100'>ClassicsByJose</a>
-        <a href="" className='flex items-center gap-3 text-sm text-zinc-400 hover:text-zinc-100'>Antigonas xD</a>
-        <a href="" className='flex items-center gap-3 text-sm text-zinc-400 hover:text-zinc-100'>Classical Essentials</a>
-        <a href="" className='flex items-center gap-3 text-sm text-zinc-400 hover:text-zinc-100'>Rosicrucian Meditation</a>
-        <a href="" className='flex items-center gap-3 text-sm text-zinc-400 hover:text-zinc-100'>Benedictus - Karl Jenkins</a>
-      </nav>
+      <ThreeAppleButtons />
+      <Menu />
+      <NavPlayList
+        items={playList}
+      />
     </aside>
   )
 }

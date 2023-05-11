@@ -1,91 +1,122 @@
+import { Album } from '@/components/Album'
+import { BackAndForthButtons } from '@/components/BackAndForthButtons'
+import { DailyMix } from '@/components/DailyMix'
 import { Footer } from '@/components/Footer'
 import { Sidebar } from '@/components/Sidebar'
-import { ChevronLeft, ChevronRight, Play } from 'lucide-react'
-import Image from 'next/image'
+import { Play } from 'lucide-react'
 
 export default function Home() {
+  const albums = [
+    {
+      id: 1,
+      name: 'The Very Best of Era',
+      alt: 'capa album era',
+      image: '/era.jpg',
+      icon: <Play />,
+    },
+    {
+      id: 2,
+      name: 'Era II',
+      alt: 'capa album era',
+      image: '/era2.jpg',
+      icon: <Play />,
+    },
+    {
+      id: 3,
+      name: 'Voyage Abba',
+      alt: 'capa album abba',
+      image: '/abba.png',
+      icon: <Play />,
+    },
+    {
+      id: 4,
+      name: 'The Best of Ennio Morricone',
+      alt: 'capa album ennio morricone',
+      image: '/ennio.jpg',
+      icon: <Play />,
+    },
+    {
+      id: 5,
+      name: 'U2',
+      alt: 'capa album u2',
+      image: '/u2.jpg',
+      icon: <Play />,
+    },
+    {
+      id: 6,
+      name: 'The Very Best of Eric Jonhson',
+      alt: 'capa album eric johnson',
+      image: '/eric.jpg',
+      icon: <Play />,
+    },
+    {
+      id: 7,
+      name: 'Vangelis',
+      alt: 'capa album vangelis',
+      image: '/vangelis.jpg',
+      icon: <Play />,
+    }];
+
+  const dailyMixes = [
+    {
+      id: 1,
+      name: 'Daily Mix 1',
+      alt: 'capa album daily mix 1',
+      image: '/ennio.jpg',
+      subtitle: 'Classic Tale, Royal Symphony Orchestra, and more',
+    },
+    {
+      id: 2,
+      name: 'Daily Mix 2',
+      alt: 'capa album daily mix 2',
+      image: '/vangelis.jpg',
+      subtitle: 'The very best of Vangelis and more',
+    },
+    {
+      id: 3,
+      name: 'Daily Mix 3',
+      alt: 'capa album daily mix 3',
+      image: '/u2.jpg',
+      subtitle: 'The very best of U2 and more',
+    },
+    {
+      id: 4,
+      name: 'Daily Mix 4',
+      alt: 'capa album daily mix 4',
+      image: '/era.jpg',
+      subtitle: 'Era, Ennya and more',
+    }];
+
   return (
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
         <Sidebar />
         <main className="flex-1 p-6">
-          <div className='flex items-center gap-4'>
-            <button className='p-1 rounded-full bg-black/40'>
-              <ChevronLeft />
-            </button>
-            <button className='p-1 rounded-full bg-black/40'>
-              <ChevronRight />
-            </button>
-          </div>
+          <BackAndForthButtons />
 
           <h1 className='font-semibold text-3xl mt-10'>Good afternoon</h1>
           <div className='grid grid-cols-3 gap-4 mt-4'>
-            <a href="#" className='group bg-white/5 rounded-md overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
-              <Image src="/album.jpeg" width={104} height={104} alt="capa album era" />
-              <strong>Era</strong>
-              <button className='w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible'>
-                <Play />
-              </button>
-            </a>
-            <a href="#" className='group bg-white/5 rounded-md overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
-              <Image src="/album.jpeg" width={104} height={104} alt="capa album era" />
-              <strong>Era</strong>
-              <button className='w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible'>
-                <Play />
-              </button>
-            </a>
-            <a href="#" className='group bg-white/5 rounded-md overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
-              <Image src="/album.jpeg" width={104} height={104} alt="capa album era" />
-              <strong>Era</strong>
-              <button className='w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible'>
-                <Play />
-              </button>
-            </a>
-            <a href="#" className='group bg-white/5 rounded-md overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
-              <Image src="/album.jpeg" width={104} height={104} alt="capa album era" />
-              <strong>Era</strong>
-              <button className='w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible'>
-                <Play />
-              </button>
-            </a>
-            <a href="#" className='group bg-white/5 rounded-md overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
-              <Image src="/album.jpeg" width={104} height={104} alt="capa album era" />
-              <strong>Era</strong>
-              <button className='w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible'>
-                <Play />
-              </button>
-            </a>
-            <a href="#" className='group bg-white/5 rounded-md overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors'>
-              <Image src="/album.jpeg" width={104} height={104} alt="capa album era" />
-              <strong>Era</strong>
-              <button className='w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible'>
-                <Play />
-              </button>
-            </a>
+            {albums.map(album => (
+              <Album
+                key={album.id}
+                name={album.name}
+                alt={album.alt}
+                image={album.image}
+                icon={album.icon}
+              />
+            ))}
           </div>
 
           <h2 className='font-semibold text-2xl mt-10'>Made for Jose Conto</h2>
           <div className="grid grid-cols-6 gap-4 mt-4">
-            <a href='#' className="bg-white/5 p-3 flex flex-col gap-2 rounded-md hover:bg-white/10">
-              <Image className="w-full" src="/album.jpeg" width={120} height={120} alt="capa album era" />
-              <strong className='font-semibold'>Daily Mix 1</strong>
-              <span className='text-sm text-zinc-400'>Classic Tale, Royal Symphony Orchestra, and more</span>
-            </a>
-            <a href='#' className="bg-white/5 p-3 flex flex-col gap-2 rounded-md hover:bg-white/10">
-              <Image className="w-full" src="/album.jpeg" width={120} height={120} alt="capa album era" />
-              <strong className='font-semibold'>Daily Mix 1</strong>
-              <span className='text-sm text-zinc-400'>Classic Tale, Royal Symphony Orchestra, and more</span>
-            </a>
-            <a href='#' className="bg-white/5 p-3 flex flex-col gap-2 rounded-md hover:bg-white/10">
-              <Image className="w-full" src="/album.jpeg" width={120} height={120} alt="capa album era" />
-              <strong className='font-semibold'>Daily Mix 1</strong>
-              <span className='text-sm text-zinc-400'>Classic Tale, Royal Symphony Orchestra, and more</span>
-            </a>
-            <a href='#' className="bg-white/5 p-3 flex flex-col gap-2 rounded-md hover:bg-white/10">
-              <Image className="w-full" src="/album.jpeg" width={120} height={120} alt="capa album era" />
-              <strong className='font-semibold'>Daily Mix 1</strong>
-              <span className='text-sm text-zinc-400'>Classic Tale, Royal Symphony Orchestra, and more</span>
-            </a>
+            {dailyMixes.map(dailyMix => (
+              <DailyMix
+                key={dailyMix.id}
+                name={dailyMix.name}
+                alt={dailyMix.alt}
+                image={dailyMix.image}
+                subtitle={dailyMix.subtitle}
+              />))}
           </div>
         </main>
       </div>
